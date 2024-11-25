@@ -1,0 +1,47 @@
+Inputs:
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 17, 18
+
+Outputs:
+
+12 (Combinatorial, No output feedback, Active low)
+13 (Combinatorial, Output feedback output, Active low)
+14 (Combinatorial, Output feedback output, Active low)
+15 (Combinatorial, Output feedback output, Active low)
+16 (Combinatorial, Output feedback output, Active low)
+17 (Combinatorial, Output feedback output, Active high)
+18 (Combinatorial, Output feedback output, Active high)
+19 (Combinatorial, No output feedback, Active low)
+
+Equations:
+
+/cs4 = /a15 & a14 & /a13 & /a12 & /!rd +
+       /a15 & a14 & /a13 & /a12 & /!wr
+cs4.oe = vcc
+
+/cs3 = /a15 & /a14 & a13 & a12 & /!rd +
+       /a15 & /a14 & a13 & a12 & /!wr
+cs3.oe = vcc
+
+/cs2 = /a15 & /a14 & a13 & /a12 & /!rd +
+       /a15 & /a14 & a13 & /a12 & /!wr
+cs2.oe = vcc
+
+/cs1 = /a15 & /a14 & /a13 & a12 & /!rd +
+       /a15 & /a14 & /a13 & a12 & /!wr
+cs1.oe = vcc
+
+/cs0 = /a15 & /a14 & /a13 & /a12 & /!rd +
+       /a15 & /a14 & /a13 & /a12 & /!wr
+cs0.oe = vcc
+
+read = !psen & !rd
+read.oe = vcc
+
+ram = !psen & !wr & !rd +
+      /a15
+ram.oe = vcc
+
+/rom = /!psen & /a15
+rom.oe = vcc
+
