@@ -4,14 +4,14 @@ Inputs:
 
 Outputs:
 
-12 (Combinatorial, No output feedback, Active low)
-13 (Combinatorial, Output feedback output, Active low)
-14 (Combinatorial, Output feedback output, Active low)
-15 (Combinatorial, Output feedback output, Active low)
-16 (Combinatorial, Output feedback output, Active low)
-17 (Combinatorial, Output feedback output, Active high)
-18 (Combinatorial, Output feedback output, Active high)
-19 (Combinatorial, No output feedback, Active low)
+12 (Combinatorial, No output feedback, Active low) (Not on schematic, call it !CS4)
+13 (Combinatorial, Output feedback output, Active low) (!CS3)
+14 (Combinatorial, Output feedback output, Active low) (!CS2)
+15 (Combinatorial, Output feedback output, Active low) (!CS1)
+16 (Combinatorial, Output feedback output, Active low) (!CS0)
+17 (Combinatorial, Output feedback output, Active high) (READ)
+18 (Combinatorial, Output feedback output, Active high) (!RAM)
+19 (Combinatorial, No output feedback, Active low) (!ROM)
 
 Equations:
 
